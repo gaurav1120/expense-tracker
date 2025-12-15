@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(test6 VERSION 0.1 LANGUAGES CXX)
+project(expense-tracker VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,28 +19,28 @@ set(PROJECT_SOURCES
     mainwindow.ui
 )
 
-qt_add_executable(test6
+qt_add_executable(expense-tracker
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
     .gitignore
 )
 
-target_link_libraries(test6
+target_link_libraries(expense-tracker
     PRIVATE
     Qt6::Widgets
     Qt6::Charts
 )
 
-set_target_properties(test6 PROPERTIES
+set_target_properties(expense-tracker PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
 
 include(GNUInstallDirs)
-install(TARGETS test6
+install(TARGETS expense-tracker
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-qt_finalize_executable(test6)
+qt_finalize_executable(expense-tracker)
