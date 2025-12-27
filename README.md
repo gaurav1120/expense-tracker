@@ -132,5 +132,3 @@ Build and run the project
 ## 👨‍💻 Author
 
 Gaurav Patel
-Embedded & Software Engineer
-Passionate about C++, system design, and desktop applications 🚀
